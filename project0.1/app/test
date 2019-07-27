@@ -1,0 +1,204 @@
+BSS 30:8d:99:ec:5a:e4(on wlan0)
+	TSF: 19211322439 usec (0d, 05:20:11)
+	freq: 2412
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortPreamble ShortSlotTime (0x0431)
+	signal: -80.00 dBm
+	last seen: 1480 ms ago
+	Information elements from Probe Response frame:
+	SSID: HP-Print-E4-Deskjet 4640 series
+	Supported rates: 1.0 2.0 5.5 6.0 9.0 11.0 12.0 18.0 
+	DS Parameter set: channel 1
+	ERP: <no flags>
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 1-PTKSA-RC 1-GTKSA-RC (0x0000)
+	Extended supported rates: 24.0 36.0 48.0 54.0 
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS d0:5b:a8:05:46:1d(on wlan0)
+	TSF: 4825059226 usec (0d, 01:20:25)
+	freq: 2452
+	beacon interval: 100 TUs
+	capability: ESS ShortPreamble ShortSlotTime ImmediateBACK (0x8421)
+	signal: -68.00 dBm
+	last seen: 820 ms ago
+	Information elements from Probe Response frame:
+	SSID: liba
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 
+	DS Parameter set: channel 9
+	ERP: <no flags>
+	Extended supported rates: 6.0 9.0 12.0 18.0 24.0 36.0 48.0 54.0 
+	HT capabilities:
+		Capabilities: 0x12c
+			HT20
+			SM Power Save disabled
+			RX HT20 SGI
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			No DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: No restriction (0x00)
+		HT RX MCS rate indexes supported: 0-7
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 9
+		 * secondary channel offset: no secondary
+		 * STA channel width: 20 MHz
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	WMM:	 * Parameter version 1
+		 * u-APSD
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+BSS c4:04:7b:84:f4:45(on wlan0)
+	TSF: 4874565310284 usec (56d, 10:02:45)
+	freq: 2472
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortSlotTime (0x0411)
+	signal: -90.00 dBm
+	last seen: 140 ms ago
+	Information elements from Probe Response frame:
+	SSID: ChinaNet-k25S
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 9.0 18.0 36.0 54.0 
+	DS Parameter set: channel 13
+	ERP: Barker_Preamble_Mode
+	Extended supported rates: 6.0 12.0 24.0 48.0 
+	HT capabilities:
+		Capabilities: 0x11ee
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			TX STBC
+			RX STBC 1-stream
+			Max AMSDU length: 3839 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: 4 usec (0x05)
+		HT RX MCS rate indexes supported: 0-15, 32
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 13
+		 * secondary channel offset: below
+		 * STA channel width: any
+		 * RIFS: 0
+		 * HT protection: no
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	WPA:	 * Version: 1
+		 * Group cipher: TKIP
+		 * Pairwise ciphers: TKIP CCMP
+		 * Authentication suites: PSK
+	RSN:	 * Version: 1
+		 * Group cipher: TKIP
+		 * Pairwise ciphers: TKIP CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 1-PTKSA-RC 1-GTKSA-RC (0x0000)
+	Extended capabilities:
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	Overlapping BSS scan params:
+		 * passive dwell: 20 TUs
+		 * active dwell: 10 TUs
+		 * channel width trigger scan interval: 300 s
+		 * scan passive total per channel: 200 TUs
+		 * scan active total per channel: 20 TUs
+		 * BSS width channel transition delay factor: 5
+		 * OBSS Scan Activity Threshold: 0.25 %
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
+		 * Response Type: 3 (AP)
+		 * UUID: bc329e00-1dd8-11b2-8601-c4047b84f445
+		 * Manufacturer: Ralink Technology, Corp.
+		 * Model: Ralink Wireless Access Point
+		 * Model Number: RT2860
+		 * Serial Number: 12345678
+		 * Primary Device Type: 6-0050f204-1
+		 * Device name: RalinkAPS
+		 * Config methods: Label, Display, PBC
+		 * RF Bands: 0x1
+BSS 40:16:9f:b0:9f:84(on wlan0)
+	TSF: 554372301184 usec (6d, 09:59:32)
+	freq: 2437
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortPreamble ShortSlotTime (0x0431)
+	signal: -92.00 dBm
+	last seen: 1100 ms ago
+	Information elements from Probe Response frame:
+	SSID: TP-LINK_B09F84
+	Supported rates: 1.0* 2.0* 5.5* 11.0* 6.0 9.0 12.0 18.0 
+	DS Parameter set: channel 6
+	TIM: DTIM Count 0 DTIM Period 1 Bitmap Control 0x0 Bitmap[0] 0x20
+	Country: US	Environment: Indoor/Outdoor
+		Channels [1 - 11] @ 27 dBm
+	ERP: <no flags>
+	RSN:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+		 * Capabilities: 1-PTKSA-RC 1-GTKSA-RC (0x0000)
+	Extended supported rates: 24.0 36.0 48.0 54.0 
+	HT capabilities:
+		Capabilities: 0x106e
+			HT20/HT40
+			SM Power Save disabled
+			RX HT20 SGI
+			RX HT40 SGI
+			No RX STBC
+			Max AMSDU length: 3839 bytes
+			DSSS/CCK HT40
+		Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+		Minimum RX AMPDU time spacing: No restriction (0x00)
+		HT RX MCS rate indexes supported: 0-7
+		HT TX MCS rate indexes are undefined
+	HT operation:
+		 * primary channel: 6
+		 * secondary channel offset: above
+		 * STA channel width: any
+		 * RIFS: 1
+		 * HT protection: 20 MHz
+		 * non-GF present: 0
+		 * OBSS non-GF present: 0
+		 * dual beacon: 0
+		 * dual CTS protection: 0
+		 * STBC beacon: 0
+		 * L-SIG TXOP Prot: 0
+		 * PCO active: 0
+		 * PCO phase: 0
+	WPA:	 * Version: 1
+		 * Group cipher: CCMP
+		 * Pairwise ciphers: CCMP
+		 * Authentication suites: PSK
+	WMM:	 * Parameter version 1
+		 * BE: CW 15-1023, AIFSN 3
+		 * BK: CW 15-1023, AIFSN 7
+		 * VI: CW 7-15, AIFSN 2, TXOP 3008 usec
+		 * VO: CW 3-7, AIFSN 2, TXOP 1504 usec
+	WPS:	 * Version: 1.0
+		 * Wi-Fi Protected Setup State: 2 (Configured)
