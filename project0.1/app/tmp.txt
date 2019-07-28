@@ -1,0 +1,9 @@
+BSS 24:69:68:39:24:de(on wlan0)
+	TSF: 178416041505 usec (2d, 01:33:36)
+	freq: 2412
+	beacon interval: 100 TUs
+	capability: ESS Privacy ShortPreamble ShortSlotTime (0x0431)
+	signal: -76.00 dBm
+	last seen: 1530 ms ago
+	Information elements from Probe Response frame:
+	SSID: TP-LINK_1018

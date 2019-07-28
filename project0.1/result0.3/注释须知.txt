@@ -1,0 +1,6 @@
+服务端所在文件夹所包含的文件： cache.txt  serverOP1.3 test4.db
+serverOP1.3.c 为服务端程序源码。
+
+web0.1 为客户端
+
+clientOP0.1 为路由器端应用程序

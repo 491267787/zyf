@@ -1,0 +1,19 @@
+
+config boardinfo
+	option ipaddr1 '192.168.8.234'
+	option netmask1 '255.0.0.0'
+	option boardname '1'
+
+config controlboard
+	option apaccount 'openwrt'
+	option pppoeaccount '0'
+	option pppoepassword '0'
+	option usrname 'zhouyufei'
+	option usrpassword '123sfaas'
+	option appassword 'openwrt1'
+	option ledstatus 'off'
+	option ledname '2'
+	option staaccount 'TP-LINK_1018'
+	option stapassword 'yanyitong160126'
+	option mode '2'
+

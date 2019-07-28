@@ -1,0 +1,41 @@
+#!/bin/sh /etc/rc.common
+
+
+START=50
+
+WEB_BIN="/app/web0.1"
+
+
+control_board()
+{
+    local apaccount, appassword;
+    
+    config_get mode $1 mode
+    config_get apaccount $1 apaccount
+    config_get appassword $1 appassword
+    config_get staaccount $1 staaccount
+    config_get stapassword $1 stapassword
+    config_get pppoeaccount $1 pppoeaccount
+    config_get pppoepassword $1 pppoepassword
+    config_get usrname $1 usrname
+    config_get usrpassword $1 usrpassword    
+    config_get ledname $1 ledname
+    config_get ledstatus $1 ledstatus   
+ 
+#    echo "${mode} ${apaccount} ${appassword}" >> "/app/test1"
+#    echo "${usrname} ${usrpassword}" >> "/app/test1"
+#    echo "${staaccount} ${stapassword}" >> "/app/test1"
+#    echo "${pppoeaccount} ${pppoepassword}" >> "/app/test1"
+#    echo "${ledname} ${ledstatus}" >> "/app/test1"
+    ${WEB_BIN} ${mode} ${apaccount} ${appassword} ${staaccount} ${stapassword} ${pppoeaccount} ${pppoepassword} ${usrname} ${usrpassword} ${ledname} ${ledstatus}
+}
+
+start() {
+    config_load attr
+    config_foreach control_board controlboard
+}
+
+stop() {
+    config_load attr
+    #config_foreach stop_instance controlboard
+}

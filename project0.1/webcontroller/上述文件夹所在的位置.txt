@@ -1,0 +1,8 @@
+本文件夹中的代码为所需添加的代码。其中添加的问价所在的位置为：
+
+
+
+init.d 位于 /etc/init.d
+config 位于 /etc/config/
+controller 位于 /usr/lib/lua/luci/controller/admin/
+modle 位于 /usr/lib/lua/luci/model/cbi/
