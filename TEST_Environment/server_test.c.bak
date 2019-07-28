@@ -39,95 +39,10 @@ void *pthread_run(void *arg)
 //    close(*arg);
 }
 
-
-/*
-func:handle ethernet's data
-*/
-void *pthread_run_listen(void *fd)
-{
-    int server_sockfd = *(int *)fd;
-    int pthread_num = 0;
-    struct sockaddr_in client_addr;
-    socklen_t length = sizeof(client_addr);
-
-    while(1)
-    {
-	pthread_num++;
-	pthread_num = pthread_num > 4 ? 1 : pthread_num;
-    	///成功返回非负描述字，出错返回-1
-    	int conn = accept(server_sockfd, (struct sockaddr*)&client_addr, &length);
-    	printf("a client has connected--%d\n",conn);
-   	printf("client's address is %s\n",(char *)&client_addr);
-    	if(conn<0)
-    	{
-       		perror("connect");
-        	exit(1);
-    	}
-
- 
-#if 1
-        int ret = pthread_create(&ptid[pthread_num],NULL,pthread_run,(void *)&conn);
-    	printf("thread's pid = %d----%d\n",(int)ptid[pthread_num],(int)pthread_self());
-    	if(0 > ret)
-    	{
-        	perror("pthread_create");
-		return -1;
-    	}
-	
-	sleep(1);
-    }
-}
-
-/*
-func:handle series data
-*/
-void pthread_run_series(void)
-{
-
-
-    char *devname = "/dev/ttyS1";
-    unsigned long      baudrate = 115200;
-    COM_PORT *comport;
-
-    char buf[buf_size];
-
-
-    comport = Comport_Init(devname, baudrate, "8N1");
-    if(NULL == comport)
-    {   
-        printf("init serial port failure\n");
-        return -1;                           
-    }   
-
-    Comport_open(comport);
-    if(comport->fd <0) 
-    {   
-         printf("open error :%s\n",strerror(errno)); 
-         exit(1);
-    }   
-
-    printf("OPEN THE DEVICE\n");
-    while(1)
-    {   
-        sleep(3);
-        if(read(comport->fd,buf,buf_size)<0)
-            return -2; 
-        printf("read is ok\n");
-        printf("read : %s\n",buf);
-        write(comport->fd,buf,buf_size);
-        printf("write is ok\n");
-        sleep(3);
-    }
-    close(comport->fd);
-    free(comport);
-    return 0;
-
-}
-
 int main(int argc,char *argv[])
 {
     void *condition_tmp;
-    int pthread_num = 0 , heartbeat = 0;
+    int pthread_num = 0;
     ///定义sockfd
     int server_sockfd = socket(AF_INET,SOCK_STREAM, 0);
 
@@ -159,32 +74,16 @@ int main(int argc,char *argv[])
         exit(1);
     }
 
-
-    pthread_t ptid[5];
-    int seriespid_num = 0;
-    int ret = pthread_create(&ptid[seriespid_num],NULL,pthread_run_series,0);
-    printf("series thread's pid = %d----%d\n",(int)ptid[seriespid_num],(int)pthread_self());
-    
-
-    int listenpid_num = 1;
-    int ret = pthread_create(&ptid[listenpid_num],NULL,pthread_run_listen,(void *)&server_sockfd);
-    printf("listen thread's pid = %d----%d\n",(int)ptid[listenpid_num],(int)pthread_self());
-
-
-
     ///客户端套接字
 //    char Rev_Buffer[BUFFER_SIZE];
-//    struct sockaddr_in client_addr;
-//    socklen_t length = sizeof(client_addr);
+    struct sockaddr_in client_addr;
+    socklen_t length = sizeof(client_addr);
 
+    pthread_t ptid[5];
     while(1)
     {
-	printf("-------heart beating----%d",heartbeat++);
-    	sleep(10);
-    }
-#if 0
 	pthread_num++;
-	pthread_num = pthread_num > 4 ? 1 : pthread_num;
+	pthread_num = pthread_num > 4 ? 0 : pthread_num;
     	///成功返回非负描述字，出错返回-1
     	int conn = accept(server_sockfd, (struct sockaddr*)&client_addr, &length);
     	printf("a client has connected--%d\n",conn);
@@ -196,6 +95,7 @@ int main(int argc,char *argv[])
     	}
 
  
+#if 1
     	int ret = pthread_create(&ptid[pthread_num],NULL,pthread_run,(void *)&conn);
     	printf("thread's pid = %d----%d\n",(int)ptid[pthread_num],(int)pthread_self());
     	if(0 > ret)
